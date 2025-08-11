@@ -1,0 +1,179 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-bar {
+  cursor: move;
+  -webkit-app-region: drag;
+  padding: 5px 10px; /* padding at top = 5px */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; /* <-- important! */
+}
+
+
+/* Background Image */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #282A36;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.background img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* keeps aspect ratio */
+  pointer-events: none;
+}
+
+/* Column Layout (Vertical Stack) */
+.column {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Space between items */
+  justify-content: center;
+  align-items: stretch; /* Stretch items to fill available space */
+  height: 95vh; /* Full screen */
+  padding: 10px;
+}
+
+/* Row Layout (Horizontal Stack) */
+.row {
+  display: flex;
+  flex-direction: row; 
+  gap: 10px; 
+  justify-content: stretch;
+  align-items: stretch; 
+  width: 100%; 
+  height: 100%; 
+}
+
+
+.row .column {
+  height: 100%; 
+  flex: 1; 
+}
+
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+/* Utility Colors based on Dracula theme */
+.primary {
+  background-color: #701adb; /* purple */
+  color: #f8f8f2;
+}
+
+.secondary {
+  background-color: #6272a4; /* comment */
+  color: #f8f8f2;
+}
+
+.danger {
+  background-color: #f10c45; /* red */
+  color: #f8f8f2;
+}
+
+.success {
+  background-color: #50fa7b; /* green */
+  color: #282a36;
+}
+
+.warning {
+  background-color: #ffb86c; /* orange */
+  color: #282a36;
+}
+
+.info {
+  background-color: #8be9fd; /* cyan */
+  color: #282a36;
+}
+
+.menu {
+    background-color: #6272A4;
+}
+
+/* Button Styling */
+.btn {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background */
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.header-btn {
+  min-width: 50px;
+  min-height: 20px;
+  margin-right: 10px;
+  border: none;
+  padding: 5px 10px; /* reduce padding */
+  border-radius: 4px;
+  font-size: 16px;
+  color: white;
+  -webkit-app-region: no-drag; /* make buttons clickable */
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #222;  
+}
+
+shadow {
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effects */
+button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);  
+}
+
+/* Focus Effects for Accessibility */
+button.btn-circle:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+button.primary:hover {
+  background-color: #8a34f3;
+}
+
+button.danger:hover {
+  background-color: #ff5555;
+}
