@@ -7,6 +7,7 @@ y te paso el repo para que puedas modificarlo hehhe, pero también te paso el ej
 I know you probably will wanna fork it so you can edit it or include gifs, remove them or whatever you wish.
 so this is a electron repository with vainilla settings.
 
+``` bash
 root/
 ├── src/
 │   ├── assets/               # Static files
@@ -21,7 +22,7 @@ root/
 │   └── index.js              # Main Electron process (app setup and window management)
 ├── package.json              # Project config and scripts
 └── forge.config.js           # Electron Forge config
-
+```
 
 ## 🚀 Quick Start
 
@@ -35,7 +36,7 @@ root/
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/your-username/widget-project.git
+    git clone https://github.com/KzrysztMansur/widget-project.git
     cd widget-project
     ```
 
